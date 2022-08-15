@@ -1,6 +1,5 @@
 package web231.service;
 
-import org.springframework.stereotype.Component;
 import web231.model.User;
 
 import java.util.List;
