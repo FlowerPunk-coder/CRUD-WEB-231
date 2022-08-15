@@ -24,12 +24,12 @@ public class UserController {
     }
 
     @GetMapping("/user")
-    public String addForm(Model model) {
+    public String getAddPage(Model model) {
         return "add";
     }
 
     @GetMapping("/edit")
-    public String editForm(@RequestParam("id") long id, Model model) {
+    public String getEditPage(@RequestParam("id") long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
         return "add";
     }
@@ -47,7 +47,7 @@ public class UserController {
     }
 
     @DeleteMapping("/del/{id}")
-    public String delUser(@PathVariable long id) {
+    public String deleteUser(@PathVariable long id) {
         userService.removeUser(id);
         return "redirect:/";
     }
