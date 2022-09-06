@@ -34,7 +34,7 @@ public class UserController {
         return "add";
     }
 
-    @PostMapping("/add")
+    @PostMapping(value = "/add")
     public String addUser(User user) {
         userService.saveUser(user);
         return "redirect:/";

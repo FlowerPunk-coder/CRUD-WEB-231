@@ -31,6 +31,8 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     @Override
     public void onStartup(ServletContext aServletContext) throws ServletException {
         super.onStartup(aServletContext);
+        aServletContext.setRequestCharacterEncoding("UTF-8");
+        aServletContext.setResponseCharacterEncoding("UTF-8");
         registerHiddenFieldFilter(aServletContext);
     }
     private void registerHiddenFieldFilter(ServletContext aContext) {
